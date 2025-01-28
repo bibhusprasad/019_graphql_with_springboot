@@ -1,4 +1,5 @@
 type Query {
     helloWorld : String
     sayHelloWorld: String
+    sayHelloTo(name: String): String
 }
