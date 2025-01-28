@@ -21,4 +21,9 @@ public class HelloWorldController {
     public String sayHelloToName(@Argument String name) {
         return "Say Hello World To - " + name;
     }
+
+    @QueryMapping("sayHelloToAny")
+    public String sayHelloToAnyName(@Argument("name") String value) {
+        return "Say Hello World To - " + value;
+    }
 }
