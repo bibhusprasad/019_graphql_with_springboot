@@ -4,4 +4,5 @@ type Query {
     #sayHelloTo(name: String): String (can accept null value)
     sayHelloTo(name: String!): String #(not null argument)
     sayHelloToAny(name: String!): String #(not null argument)
+    randomNo: Int! #(not null argument)
 }
