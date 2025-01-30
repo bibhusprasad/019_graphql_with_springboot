@@ -1,4 +1,5 @@
-type Query {
+type Query{
+
     helloWorld : String
     sayHelloWorld: String
     #sayHelloTo(name: String): String (can accept null value)
@@ -6,3 +7,4 @@ type Query {
     sayHelloToAny(name: String!): String #(not null argument)
     randomNo: Int! #(not null argument)
 }
+
