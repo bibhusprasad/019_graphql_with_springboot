@@ -13,7 +13,7 @@
 * [Query passing argument 2](https://github.com/bibhusprasad/019_graphql_with_springboot/commit/604b2c5636f18d9d8dc8fe6ec13520a7c14525ec)
 * [code refactored move to different packages](https://github.com/bibhusprasad/019_graphql_with_springboot/commit/24afd31b219d6c0b4b24213e2e73d7c0f65c5317)
 * [code refactored move to different packages](https://github.com/bibhusprasad/019_graphql_with_springboot/commit/a84101622fb0df2e4a371128f368de2abbbbf50d)
-* [custom type and input type implementation]()
+* [custom type and input type implementation](https://github.com/bibhusprasad/019_graphql_with_springboot/commit/76b57b030f98d9eee710d11bdc4895a2129c49ba)
 
 
 ## Notes
