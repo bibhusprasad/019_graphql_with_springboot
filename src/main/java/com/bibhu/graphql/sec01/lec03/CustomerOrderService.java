@@ -1,36 +1,34 @@
 package com.bibhu.graphql.sec01.lec03;
 
+import com.bibhu.graphql.sec01.model.Customer;
+import com.bibhu.graphql.sec01.database.CustomersDatabase;
+import com.bibhu.graphql.sec01.database.CustomersOrderDatabase;
+import com.bibhu.graphql.sec01.model.CustomerOrder;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 @Service
 public class CustomerOrderService {
 
-    private final Map<String, List<CustomerOrder>> customerOrdersMap = Map.of(
-            "Sam", List.of(
-                    new CustomerOrder(1, "TV", 54000f),
-                    new CustomerOrder(7, "Table", 18500f)
-            ),
-            "Mike", List.of(
-                    new CustomerOrder(2, "Mobile", 141000f)
-            ),
-            "Jake", List.of(
-                    new CustomerOrder(3, "Laptop", 78000f)
-            ),
-            "John", List.of(
-                    new CustomerOrder(4, "Cycle", 9000f)
-            ),
-            "Rose", List.of(
-                    new CustomerOrder(5, "Book", 3400f),
-                    new CustomerOrder(6, "Toys", 1200f)
-            )
-    );
+    private final CustomersDatabase customersDatabase;
+    private final CustomersOrderDatabase customersOrderDatabase;
+
+    @Autowired
+    public CustomerOrderService(CustomersDatabase customersDatabase,
+                                CustomersOrderDatabase customersOrderDatabase) {
+        this.customersDatabase = customersDatabase;
+        this.customersOrderDatabase = customersOrderDatabase;
+    }
+
+    public List<Customer> getAllCustomers() {
+        return customersDatabase.getCustomersListFromDatabase();
+    }
 
     public List<CustomerOrder> ordersByCustomerName(String name) {
-        return customerOrdersMap.getOrDefault(name, new ArrayList<>());
+        return customersOrderDatabase.getCustomersOrdersListFromDatabase().getOrDefault(name, new ArrayList<>());
     }
 
 }

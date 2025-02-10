@@ -33,4 +33,5 @@ public class HelloWorldController {
     public int generateRandomNumber() {
         return ThreadLocalRandom.current().nextInt(1, 100);
     }
+
 }

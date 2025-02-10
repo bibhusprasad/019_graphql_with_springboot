@@ -1,0 +1,14 @@
+
+extend type Query{
+    customersWithOrders: [Customer]
+}
+
+extend type Customer{
+    orders: [CustomerOrder]
+}
+
+type CustomerOrder{
+    id: ID
+    description: String
+    price: Float
+}
