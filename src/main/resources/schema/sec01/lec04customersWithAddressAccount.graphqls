@@ -1,0 +1,9 @@
+
+extend type Query{
+    customersWithAddressAccount: [Customer]
+}
+
+extend type Customer{
+    address: Address
+    account: Account
+}

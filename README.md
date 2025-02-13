@@ -16,7 +16,9 @@
 * [custom type and input type implementation](https://github.com/bibhusprasad/019_graphql_with_springboot/commit/76b57b030f98d9eee710d11bdc4895a2129c49ba)
 * [Nested Objects Schema Design](https://github.com/bibhusprasad/019_graphql_with_springboot/commit/ea9f3d3dbc06d746b0b82a0f0f1983944672d6c9)
 
-* [IMP : Refactored code : rearrange schemas for better understanding]()
+* [IMP : Refactored code : rearrange schemas for better understanding](https://github.com/bibhusprasad/019_graphql_with_springboot/commit/f7c699d7ea9865533968eb2cd7003f3c7c87e360)
+
+* [data fetching from multiple controller]()
 
 
 ## Notes

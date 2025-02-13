@@ -12,24 +12,19 @@ import java.util.List;
 @Controller
 public class CustomerOrderController {
 
-    private CustomerOrderService customerService;
-
     private CustomerOrderService customerOrderService;
 
     @Autowired
-    public CustomerOrderController(CustomerOrderService customerService, CustomerOrderService customerOrderService) {
-        this.customerService = customerService;
+    public CustomerOrderController(CustomerOrderService customerOrderService) {
         this.customerOrderService = customerOrderService;
     }
 
     @QueryMapping("customersWithOrders")
     public List<Customer> customers() {
-        return this.customerService.getAllCustomers();
+        return this.customerOrderService.getAllCustomers();
     }
 
-    @SchemaMapping(
-            typeName = "Customer"
-    )
+    @SchemaMapping(typeName = "Customer")
     public List<CustomerOrder> orders(Customer customer) {
         return this.customerOrderService.ordersByCustomerName(customer.getName());
     }
